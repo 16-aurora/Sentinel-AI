@@ -1,0 +1,17 @@
+﻿feature,status,risk,notes
+severity_normalized,CANDIDATE,LOW,Continuous normalized CVSS score.
+technical_severity,ALTERNATIVE,LOW,Categorical alternative to normalized severity.
+attack_vector_score,CANDIDATE,MEDIUM,Heuristic encoding of attack vector.
+attack_complexity_score,CANDIDATE,MEDIUM,Heuristic encoding of attack complexity.
+privileges_score,CANDIDATE,MEDIUM,Heuristic encoding of required privileges.
+user_interaction_score,CANDIDATE,MEDIUM,Heuristic encoding of user interaction.
+attack_feasibility_index,ALTERNATIVE,MEDIUM,Aggregate of attack feasibility components.
+confidentiality_impact_score,CANDIDATE,MEDIUM,Technical impact component.
+integrity_impact_score,CANDIDATE,MEDIUM,Technical impact component.
+availability_impact_score,CANDIDATE,MEDIUM,Technical impact component.
+technical_impact_index,ALTERNATIVE,MEDIUM,Aggregate of technical impact components.
+vulnerability_age_days,REVIEW,HIGH,Depends on reference date; potential temporal leakage.
+original_remediation_window,REVIEW,MEDIUM,Verify point-in-time availability before prediction.
+vendorProject,CANDIDATE,MEDIUM,High-cardinality categorical feature.
+product,CANDIDATE,MEDIUM,High-cardinality categorical feature.
+cwes,CANDIDATE,MEDIUM,Multi-label categorical feature requiring encoding.

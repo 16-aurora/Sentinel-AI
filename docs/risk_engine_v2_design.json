@@ -1,0 +1,50 @@
+{
+    "project": "Sentinel AI",
+    "component": "Risk Engine",
+    "version": "2.0",
+    "status": "Design approved for implementation",
+    "reference_date": "2026-11-11",
+    "risk_components": {
+        "technical_severity": {
+            "source": "cvss_base_score",
+            "weight": 0.65,
+            "normalization": "CVSS / 10"
+        },
+        "ransomware_association": {
+            "source": "knownRansomwareCampaignUse",
+            "weight": 0.25,
+            "known_value": 1.0,
+            "unknown_value": null,
+            "interpretation": "Unknown means no confirmed association in the available data, not absence of risk."
+        },
+        "temporal_urgency": {
+            "weight": 0.1,
+            "status": "Excluded from current V2 calculation",
+            "reason": "Historical remediation deadlines are not evidence of current unpatched status."
+        }
+    },
+    "weighting_method": "Available component weights are renormalized when ransomware association is unknown.",
+    "classification_thresholds": {
+        "CRITICAL": "80-100",
+        "HIGH": "60-79.99",
+        "MEDIUM": "40-59.99",
+        "LOW": "0-39.99"
+    },
+    "validation_observations": {
+        "dataset_records": 1768,
+        "known_ransomware_records": 361,
+        "unknown_ransomware_records": 1407,
+        "mean_cvss": 8.4083,
+        "v2_mean_score": 84.88,
+        "v2_critical_percentage": 64.03,
+        "known_group_critical_percentage": 87.53,
+        "unknown_group_critical_percentage": 58.0
+    },
+    "limitations": [
+        "Scores are heuristic prioritization scores, not calibrated probabilities.",
+        "CISA KEV records represent known exploited vulnerabilities.",
+        "Unknown ransomware association is not a negative label.",
+        "Current patch status is not available in the dataset.",
+        "Weights and thresholds require further validation."
+    ]
+}

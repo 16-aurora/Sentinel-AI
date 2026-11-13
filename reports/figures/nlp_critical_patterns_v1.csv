@@ -1,0 +1,9 @@
+pattern,critical_count,critical_percentage
+remote_code_execution,389,34.36395759717315
+authentication_bypass,77,6.802120141342756
+privilege_escalation,72,6.36042402826855
+denial_of_service,53,4.681978798586572
+path_traversal,45,3.9752650176678443
+sql_injection,29,2.5618374558303887
+arbitrary_file_upload,7,0.6183745583038869
+cross-site_scripting,4,0.35335689045936397

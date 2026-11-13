@@ -1,0 +1,7 @@
+﻿indicator_a,indicator_b,common_observations,pearson_correlation
+gdp_growth,gdp_per_capita_growth,270,0.9864
+gdp_growth,inflation,297,0.0681
+gdp_growth,unemployment,297,0.0426
+gdp_per_capita_growth,inflation,270,0.0581
+gdp_per_capita_growth,unemployment,270,0.0313
+inflation,unemployment,297,-0.5011

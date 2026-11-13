@@ -1,0 +1,18 @@
+{
+    "vendor_overlap_count": 84,
+    "validation_vendor_count": 117,
+    "vendor_overlap_percentage": 71.79,
+    "product_overlap_count": 123,
+    "validation_product_count": 225,
+    "product_overlap_percentage": 54.67,
+    "shared_years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+    ],
+    "temporal_validation_required": true,
+    "group_validation_required": true
+}

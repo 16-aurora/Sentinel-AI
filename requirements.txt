@@ -1,0 +1,28 @@
+# Data analysis
+numpy
+pandas
+scipy
+
+# Data visualization
+matplotlib
+seaborn
+plotly
+
+# Machine Learning
+scikit-learn
+joblib
+
+# API
+fastapi
+uvicorn[standard]
+pydantic
+
+# Configuration
+python-dotenv
+pyyaml
+requests
+
+# Testing
+pytest
+httpx
+httpx2==2.16.0

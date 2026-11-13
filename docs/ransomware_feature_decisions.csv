@@ -1,0 +1,7 @@
+﻿feature,decision,reason
+vendor_frequency_log,Experimental,Small observed difference between labels
+product_frequency_log,Experimental,Almost identical mean values between labels
+days_since_added,Excluded provisionally,Potential temporal label bias
+added_year,Excluded provisionally,Strong temporal variation in label proportions
+added_month,Excluded provisionally,Temporal variable requiring further investigation
+has_forensic_triage,Excluded provisionally,Introduced only in 2026 in this dataset

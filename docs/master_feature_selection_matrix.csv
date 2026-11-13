@@ -1,0 +1,101 @@
+﻿feature,group,origin,decision,reason
+cveID,IDENTIFIER,Original,EXCLUDE,Unique identifier; not a predictive feature
+vendorProject,CATEGORICAL,Original,ALTERNATIVE,Potential categorical or frequency-encoded features
+product,CATEGORICAL,Original,ALTERNATIVE,Potential categorical or frequency-encoded features
+vulnerabilityName,TEXT_NLP,Original,ALTERNATIVE,Potential NLP features; require dedicated preprocessing
+shortDescription,TEXT_NLP,Original,ALTERNATIVE,Potential NLP features; require dedicated preprocessing
+nvd_description,TEXT_NLP,Original,ALTERNATIVE,Potential NLP features; require dedicated preprocessing
+cvss_base_score,SEVERITY,NVD,ALTERNATIVE,Equivalent severity representations; select one per model
+severity_normalized,SEVERITY,NVD,ALTERNATIVE,Equivalent severity representations; select one per model
+technical_severity,SEVERITY,Derived,ALTERNATIVE,Categorical representation of CVSS severity
+attack_vector_score,ATTACK_FEASIBILITY,Derived,ALTERNATIVE,Heuristic components and aggregate index; compare model variants
+attack_complexity_score,ATTACK_FEASIBILITY,Derived,ALTERNATIVE,Heuristic components and aggregate index; compare model variants
+privileges_score,ATTACK_FEASIBILITY,Derived,ALTERNATIVE,Heuristic components and aggregate index; compare model variants
+user_interaction_score,ATTACK_FEASIBILITY,Derived,ALTERNATIVE,Heuristic components and aggregate index; compare model variants
+attack_feasibility_index,ATTACK_FEASIBILITY,Derived,ALTERNATIVE,Heuristic components and aggregate index; compare model variants
+confidentiality_impact_score,TECHNICAL_IMPACT,Derived,ALTERNATIVE,Individual impact dimensions; compare against aggregate index
+integrity_impact_score,TECHNICAL_IMPACT,Derived,ALTERNATIVE,Individual impact dimensions; compare against aggregate index
+availability_impact_score,TECHNICAL_IMPACT,Derived,ALTERNATIVE,Individual impact dimensions; compare against aggregate index
+technical_impact_index,TECHNICAL_IMPACT,Derived,ALTERNATIVE,Aggregate impact index; avoid redundant use with all components
+vulnerability_age_days,TEMPORAL,Derived,KEEP,Initial temporal model candidates
+days_overdue,TEMPORAL,Derived,KEEP,Initial temporal model candidates
+original_remediation_window,TEMPORAL,Derived,KEEP,Initial temporal model candidates
+days_until_due,TEMPORAL,Derived,ALTERNATIVE,Redundant or alternative temporal representations
+deadline_overdue,TEMPORAL,Derived,ALTERNATIVE,Redundant or alternative temporal representations
+remediation_urgency,TEMPORAL,Derived,ALTERNATIVE,Redundant or alternative temporal representations
+overdue_age_category,TEMPORAL,Derived,ALTERNATIVE,Redundant or alternative temporal representations
+age_group,TEMPORAL,Derived,ALTERNATIVE,Redundant or alternative temporal representations
+age_delay_difference,TEMPORAL,Derived,ALTERNATIVE,Redundant or alternative temporal representations
+action_apply_updates,REMEDIATION,Derived,KEEP,Initial remediation model candidates
+action_apply_mitigations,REMEDIATION,Derived,KEEP,Initial remediation model candidates
+action_discontinue_product,REMEDIATION,Derived,KEEP,Initial remediation model candidates
+action_eol_eos,REMEDIATION,Derived,KEEP,Initial remediation model candidates
+action_security_assessment,REMEDIATION,Derived,KEEP,Initial remediation model candidates
+action_disconnect_product,REMEDIATION,Derived,ALTERNATIVE,Redundant or alternative remediation representations
+action_cisa_directive,REMEDIATION,Derived,ALTERNATIVE,Redundant or alternative remediation representations
+action_exposure_assessment,REMEDIATION,Derived,ALTERNATIVE,Redundant or alternative remediation representations
+action_forensic_investigation,REMEDIATION,Derived,ALTERNATIVE,Redundant or alternative remediation representations
+active_remediation_indicators,REMEDIATION,Derived,ALTERNATIVE,Redundant or alternative remediation representations
+ransomware_known,TARGET,Derived,TARGET,Positive-unlabeled target; Unknown must not be treated as negative
+ransomware_label_available,TARGET_METADATA,Derived,EXCLUDE,Constant availability indicator; no predictive information
+cvss4_attack_requirements_encoded,CVSS4,Derived,ALTERNATIVE,CVSS 4.0 ordinal features; available for only 115 records
+cvss4_vuln_confidentiality_impact_encoded,CVSS4,Derived,ALTERNATIVE,CVSS 4.0 ordinal features; available for only 115 records
+cvss4_vuln_integrity_impact_encoded,CVSS4,Derived,ALTERNATIVE,CVSS 4.0 ordinal features; available for only 115 records
+cvss4_vuln_availability_impact_encoded,CVSS4,Derived,ALTERNATIVE,CVSS 4.0 ordinal features; available for only 115 records
+cvss4_sub_confidentiality_impact_encoded,CVSS4,Derived,ALTERNATIVE,CVSS 4.0 ordinal features; available for only 115 records
+cvss4_sub_integrity_impact_encoded,CVSS4,Derived,ALTERNATIVE,CVSS 4.0 ordinal features; available for only 115 records
+cvss4_sub_availability_impact_encoded,CVSS4,Derived,ALTERNATIVE,CVSS 4.0 ordinal features; available for only 115 records
+nvd_found,DATA_QUALITY,NVD,EXCLUDE,Constant ingestion status fields; retain for provenance and QA
+nvd_status,DATA_QUALITY,NVD,EXCLUDE,Constant ingestion status fields; retain for provenance and QA
+dateAdded,TEMPORAL_SOURCE,CISA,ALTERNATIVE,Original dates; derived temporal features are preferred
+dueDate,TEMPORAL_SOURCE,CISA,ALTERNATIVE,Original dates; derived temporal features are preferred
+requiredAction,REMEDIATION_SOURCE,CISA,ALTERNATIVE,Original remediation text; engineered indicators are preferred
+knownRansomwareCampaignUse,TARGET_SOURCE,CISA,TARGET,Original positive-unlabeled target source; never use as predictor
+forensicTriage,TARGET_METADATA,CISA,ALTERNATIVE,Original forensic triage label; requires separate semantic review
+notes,TEXT_NLP,CISA,ALTERNATIVE,Free text; potential NLP use after content and leakage review
+cwes,CATEGORICAL,CISA,ALTERNATIVE,CWE weakness categories; potential multi-label encoding
+nvd_published,TEMPORAL_SOURCE,NVD,ALTERNATIVE,Original NVD timestamps; potential temporal features
+nvd_last_modified,TEMPORAL_SOURCE,NVD,ALTERNATIVE,Original NVD timestamps; potential temporal features
+nvd_cwe,CATEGORICAL,NVD,ALTERNATIVE,NVD weakness categories; alternative to CISA CWE field
+nvd_reference_count,NVD_METADATA,NVD,ALTERNATIVE,Potential reference-volume feature; assess availability and bias
+cvss_version,CVSS_ORIGINAL,NVD,ALTERNATIVE,Original categorical CVSS metrics; compare with derived encodings
+cvss_severity,CVSS_ORIGINAL,NVD,ALTERNATIVE,Original categorical CVSS metrics; compare with derived encodings
+attack_vector,CVSS_ORIGINAL,NVD,ALTERNATIVE,Original categorical CVSS metrics; compare with derived encodings
+attack_complexity,CVSS_ORIGINAL,NVD,ALTERNATIVE,Original categorical CVSS metrics; compare with derived encodings
+privileges_required,CVSS_ORIGINAL,NVD,ALTERNATIVE,Original categorical CVSS metrics; compare with derived encodings
+user_interaction,CVSS_ORIGINAL,NVD,ALTERNATIVE,Original categorical CVSS metrics; compare with derived encodings
+scope,CVSS_ORIGINAL,NVD,ALTERNATIVE,Original categorical CVSS metrics; compare with derived encodings
+confidentiality_impact,CVSS_ORIGINAL,NVD,ALTERNATIVE,Original categorical CVSS metrics; compare with derived encodings
+integrity_impact,CVSS_ORIGINAL,NVD,ALTERNATIVE,Original categorical CVSS metrics; compare with derived encodings
+availability_impact,CVSS_ORIGINAL,NVD,ALTERNATIVE,Original categorical CVSS metrics; compare with derived encodings
+cvss_vector,CVSS_METADATA,NVD,ALTERNATIVE,Structured CVSS vector string; requires dedicated parsing
+cvss_source,CVSS_PROVENANCE,NVD,EXCLUDE,Assessment provenance; retain for audit and stratified evaluation
+cvss_assessment_type,CVSS_PROVENANCE,NVD,EXCLUDE,Assessment provenance; retain for audit and stratified evaluation
+cvss4_attack_requirements,CVSS4_CORE,NVD,ALTERNATIVE,Original CVSS 4.0 core metrics; compare with encoded versions
+cvss4_vuln_confidentiality_impact,CVSS4_CORE,NVD,ALTERNATIVE,Original CVSS 4.0 core metrics; compare with encoded versions
+cvss4_vuln_integrity_impact,CVSS4_CORE,NVD,ALTERNATIVE,Original CVSS 4.0 core metrics; compare with encoded versions
+cvss4_vuln_availability_impact,CVSS4_CORE,NVD,ALTERNATIVE,Original CVSS 4.0 core metrics; compare with encoded versions
+cvss4_sub_confidentiality_impact,CVSS4_CORE,NVD,ALTERNATIVE,Original CVSS 4.0 core metrics; compare with encoded versions
+cvss4_sub_integrity_impact,CVSS4_CORE,NVD,ALTERNATIVE,Original CVSS 4.0 core metrics; compare with encoded versions
+cvss4_sub_availability_impact,CVSS4_CORE,NVD,ALTERNATIVE,Original CVSS 4.0 core metrics; compare with encoded versions
+cvss4_exploit_maturity,CVSS4_EXPERIMENTAL,NVD,ALTERNATIVE,Partial coverage; experimental candidates requiring missingness analysis
+cvss4_automatable,CVSS4_EXPERIMENTAL,NVD,ALTERNATIVE,Partial coverage; experimental candidates requiring missingness analysis
+cvss4_recovery,CVSS4_EXPERIMENTAL,NVD,ALTERNATIVE,Partial coverage; experimental candidates requiring missingness analysis
+cvss4_safety,CVSS4_EXPERIMENTAL,NVD,ALTERNATIVE,Partial coverage; experimental candidates requiring missingness analysis
+cvss4_value_density,CVSS4_EXPERIMENTAL,NVD,ALTERNATIVE,Partial coverage; experimental candidates requiring missingness analysis
+cvss4_vulnerability_response_effort,CVSS4_EXPERIMENTAL,NVD,ALTERNATIVE,Partial coverage; experimental candidates requiring missingness analysis
+cvss4_provider_urgency,CVSS4_EXPERIMENTAL,NVD,ALTERNATIVE,Partial coverage; experimental candidates requiring missingness analysis
+cvss4_confidentiality_requirement,CVSS4_CONSTANT,NVD,EXCLUDE,No observed variation; NOT_DEFINED in all CVSS 4.0 records
+cvss4_integrity_requirement,CVSS4_CONSTANT,NVD,EXCLUDE,No observed variation; NOT_DEFINED in all CVSS 4.0 records
+cvss4_availability_requirement,CVSS4_CONSTANT,NVD,EXCLUDE,No observed variation; NOT_DEFINED in all CVSS 4.0 records
+cvss4_modified_attack_vector,CVSS4_CONSTANT,NVD,EXCLUDE,No observed variation; NOT_DEFINED in all CVSS 4.0 records
+cvss4_modified_attack_complexity,CVSS4_CONSTANT,NVD,EXCLUDE,No observed variation; NOT_DEFINED in all CVSS 4.0 records
+cvss4_modified_attack_requirements,CVSS4_CONSTANT,NVD,EXCLUDE,No observed variation; NOT_DEFINED in all CVSS 4.0 records
+cvss4_modified_privileges_required,CVSS4_CONSTANT,NVD,EXCLUDE,No observed variation; NOT_DEFINED in all CVSS 4.0 records
+cvss4_modified_user_interaction,CVSS4_CONSTANT,NVD,EXCLUDE,No observed variation; NOT_DEFINED in all CVSS 4.0 records
+cvss4_modified_vuln_confidentiality_impact,CVSS4_CONSTANT,NVD,EXCLUDE,No observed variation; NOT_DEFINED in all CVSS 4.0 records
+cvss4_modified_vuln_integrity_impact,CVSS4_CONSTANT,NVD,EXCLUDE,No observed variation; NOT_DEFINED in all CVSS 4.0 records
+cvss4_modified_vuln_availability_impact,CVSS4_CONSTANT,NVD,EXCLUDE,No observed variation; NOT_DEFINED in all CVSS 4.0 records
+cvss4_modified_sub_confidentiality_impact,CVSS4_CONSTANT,NVD,EXCLUDE,No observed variation; NOT_DEFINED in all CVSS 4.0 records
+cvss4_modified_sub_integrity_impact,CVSS4_CONSTANT,NVD,EXCLUDE,No observed variation; NOT_DEFINED in all CVSS 4.0 records
+cvss4_modified_sub_availability_impact,CVSS4_CONSTANT,NVD,EXCLUDE,No observed variation; NOT_DEFINED in all CVSS 4.0 records

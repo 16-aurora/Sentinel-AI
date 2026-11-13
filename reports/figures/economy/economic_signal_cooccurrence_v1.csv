@@ -1,0 +1,4 @@
+﻿indicator_a,indicator_b,country_year_cooccurrences
+gdp_growth,gdp_per_capita_growth,24
+gdp_growth,inflation,1
+gdp_per_capita_growth,inflation,1

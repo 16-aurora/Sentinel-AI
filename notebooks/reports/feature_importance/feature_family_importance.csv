@@ -1,0 +1,9 @@
+family,total_importance,number_of_features,model,importance_percentage
+Vendor features,0.41384444160077843,116,Extra Trees,41.38444416007784
+Product features,0.2345652946061227,182,Extra Trees,23.45652946061227
+CWE features,0.2085819738625836,180,Extra Trees,20.85819738625836
+Numeric features,0.14300828993051523,8,Extra Trees,14.300828993051523
+Vendor features,0.3523178630090168,116,Random Forest,35.235309831884884
+Numeric features,0.22293085266286222,8,Random Forest,22.295314797766004
+CWE features,0.21844582952525862,180,Random Forest,21.8467676292888
+Product features,0.20620545480286204,182,Random Forest,20.622607741060317

@@ -1,0 +1,12 @@
+﻿feature
+severity_normalized
+attack_vector_score
+attack_complexity_score
+privileges_score
+user_interaction_score
+confidentiality_impact_score
+integrity_impact_score
+availability_impact_score
+vendorProject
+product
+cwes

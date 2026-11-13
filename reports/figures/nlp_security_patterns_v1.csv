@@ -1,0 +1,9 @@
+security_pattern,frequency
+Remote Code Execution,476
+Privilege Escalation,165
+Denial of Service,97
+Authentication Bypass,95
+Path Traversal,86
+SQL Injection,32
+Cross-Site Scripting,32
+Arbitrary File Upload,12

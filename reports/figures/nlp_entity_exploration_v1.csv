@@ -1,0 +1,34 @@
+category,entity,mentions
+Enterprise Software,microsoft,412
+Operating Systems,windows,242
+Operating Systems,ios,160
+Enterprise Software,cisco,143
+Enterprise Software,adobe,92
+Operating Systems,macos,73
+Browsers,chrome,72
+Browsers,edge,65
+Enterprise Software,oracle,64
+Browsers,opera,57
+Web Technologies,php,49
+Browsers,safari,46
+Web Technologies,apache,44
+Operating Systems,linux,42
+Enterprise Software,ivanti,41
+Cloud and Infrastructure,vmware,35
+Enterprise Software,fortinet,31
+Operating Systems,android,25
+Cloud and Infrastructure,cloud,20
+Browsers,firefox,18
+Enterprise Software,sap,17
+Web Technologies,wordpress,11
+Web Technologies,drupal,9
+Enterprise Software,gitlab,7
+Web Technologies,tomcat,6
+Cloud and Infrastructure,azure,5
+Cloud and Infrastructure,docker,3
+Cloud and Infrastructure,aws,2
+Operating Systems,unix,2
+Operating Systems,debian,1
+Operating Systems,ubuntu,0
+Web Technologies,nginx,0
+Cloud and Infrastructure,kubernetes,0

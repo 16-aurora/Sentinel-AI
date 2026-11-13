@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050B18">
+
+    <title>Sentinel AI | Risk Intelligence</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+    <script src="https://cdn.plot.ly/plotly-3.1.0.min.js"></script>
+    <script src="/static/js/charts.js" defer></script>
+    <script src="/static/js/app.js" defer></script>
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">◈</div>
+            <div>
+                <div class="brand-name">SENTINEL AI</div>
+                <div class="eyebrow">INTELLIGENCE</div>
+            </div>
+        </div>
+
+        <div class="nav-label">MAIN WORKSPACE</div>
+
+        <nav class="navigation">
+            <a href="#overview" class="nav-item active" data-section="overview">
+                <span>◫</span>
+                <span>Overview</span>
+            </a>
+
+            <a href="#cybersecurity" class="nav-item" data-section="cybersecurity">
+                <span>⌘</span>
+                <span>Cybersecurity</span>
+            </a>
+
+            <a href="#climate" class="nav-item" data-section="climate">
+                <span>◉</span>
+                <span>Climate Intelligence</span>
+            </a>
+
+            <a href="#economy" class="nav-item" data-section="economy">
+                <span>⌁</span>
+                <span>Economic Intelligence</span>
+            </a>
+        </nav>
+
+        <div class="nav-label">SYSTEM</div>
+
+        <nav>
+            <a href="#system" class="nav-item" data-section="system">
+                <span>⌬</span>
+                <span>System Health</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="eyebrow">MULTIDOMAIN PLATFORM</div>
+            <div class="metric-description">Early Warning System · V1.0</div>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <div class="eyebrow">RISK INTELLIGENCE PLATFORM</div>
+                <h1 class="tech-heading">COMMAND CENTER</h1>
+                <p class="metric-description">
+                    Multidomain intelligence and early warning system
+                </p>
+            </div>
+
+            <div class="system-status">
+                <span class="status-dot"></span>
+                <span id="system-status">CONNECTING TO SENTINEL</span>
+            </div>
+
+        </header>
+
+
+        <!-- OVERVIEW -->
+        <section id="overview" class="dashboard-section">
+
+            <div class="section-heading">
+                <div>
+                    <div class="eyebrow">GLOBAL MONITORING</div>
+                    <h2 class="section-title">Intelligence Overview</h2>
+                </div>
+
+                <div class="metric-description" id="last-updated">
+                    Waiting for system data...
+                </div>
+            </div>
+
+
+            <!-- KPI CARDS -->
+            <div class="dashboard-grid kpi-grid">
+
+                <article class="card card-gradient glow-blue grid-3">
+                    <div class="card-label">Available Domains</div>
+                    <div class="metric-value metric-accent" id="domains-online">--</div>
+                    <div class="metric-description">
+                        Intelligence domains operational
+                    </div>
+                </article>
+
+                <article class="card grid-3">
+                    <div class="card-label">Monitored Records</div>
+                    <div class="metric-value metric-accent" id="total-records">--</div>
+                    <div class="metric-description">
+                        Records across available domains
+                    </div>
+                </article>
+
+                <article class="card grid-3">
+                    <div class="card-label">Cybersecurity</div>
+                    <div class="metric-value metric-accent" id="cyber-records">--</div>
+                    <div class="metric-description">
+                        Vulnerability records
+                    </div>
+                </article>
+
+                <article class="card card-gradient glow-cyan grid-3">
+                    <div class="card-label">System Status</div>
+                    <div class="metric-value metric-accent" id="global-status">--</div>
+                    <div class="metric-description">
+                        Multidomain availability
+                    </div>
+                </article>
+
+            </div>
+
+
+            <!-- DOMAIN PANELS -->
+            <div class="section-heading domain-heading">
+                <div>
+                    <div class="eyebrow">INTELLIGENCE DOMAINS</div>
+                    <h2 class="section-title">Risk Monitoring</h2>
+                </div>
+            </div>
+
+
+            <div class="dashboard-grid">
+
+                <article class="card card-gradient grid-4">
+                    <div class="card-label">CYBERSECURITY INTELLIGENCE</div>
+                    <h3 class="metric-value metric-accent" id="cyber-status">--</h3>
+                    <div class="metric-description" id="cyber-summary">
+                        Awaiting domain information
+                    </div>
+                    <div class="gradient-line"></div>
+                </article>
+
+
+                <article class="card card-gradient grid-4">
+                    <div class="card-label">CLIMATE INTELLIGENCE</div>
+                    <h3 class="metric-value metric-accent" id="climate-status">--</h3>
+                    <div class="metric-description" id="climate-summary">
+                        Awaiting domain information
+                    </div>
+                    <div class="gradient-line"></div>
+                </article>
+
+
+                <article class="card card-gradient grid-4">
+                    <div class="card-label">ECONOMIC INTELLIGENCE</div>
+                    <h3 class="metric-value metric-accent" id="economy-status">--</h3>
+                    <div class="metric-description" id="economy-summary">
+                        Awaiting domain information
+                    </div>
+                    <div class="gradient-line"></div>
+                </article>
+
+
+                <!-- CHARTS -->
+                <article class="card grid-6">
+                    <div class="card-label">CYBERSECURITY RISK DISTRIBUTION</div>
+                    <div id="cyber-chart" style="height: 300px;"></div>
+                </article>
+
+
+                <article class="card grid-6">
+                    <div class="card-label">DOMAIN DATA COVERAGE</div>
+                    <div id="coverage-chart" style="height: 300px;"></div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- DOMAIN SECTIONS -->
+        <section id="cybersecurity" class="dashboard-section domain-detail">
+            <div class="section-heading">
+                <div class="eyebrow">DOMAIN 01</div>
+                <h2 class="section-title">Cybersecurity Intelligence</h2>
+            </div>
+            <div class="card">
+                <p class="metric-description">
+                    Vulnerability intelligence and cybersecurity risk assessment.
+                </p>
+                <div id="cyber-detail"></div>
+            </div>
+        </section>
+
+
+        <section id="climate" class="dashboard-section domain-detail">
+            <div class="section-heading">
+                <div class="eyebrow">DOMAIN 02</div>
+                <h2 class="section-title">Climate Intelligence</h2>
+            </div>
+            <div class="card">
+                <p class="metric-description">
+                    Climate exposure and environmental risk assessment.
+                </p>
+                <div id="climate-detail"></div>
+            </div>
+        </section>
+
+
+        <section id="economy" class="dashboard-section domain-detail">
+            <div class="section-heading">
+                <div class="eyebrow">DOMAIN 03</div>
+                <h2 class="section-title">Economic Intelligence</h2>
+            </div>
+            <div class="card">
+                <p class="metric-description">
+                    Economic indicators and country-level risk assessment.
+                </p>
+                <div id="economy-detail"></div>
+            </div>
+        </section>
+
+
+        <section id="system" class="dashboard-section domain-detail">
+            <div class="section-heading">
+                <div class="eyebrow">SYSTEM MONITORING</div>
+                <h2 class="section-title">System Health</h2>
+            </div>
+            <div class="card">
+                <div id="system-detail">
+                    Waiting for backend connection...
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="dashboard-footer">
+            <span class="brand-name">SENTINEL AI</span>
+            <span>Multidomain Risk Intelligence & Early Warning System</span>
+        </footer>
+
+    </main>
+
+</div>
+
+    <script src="/static/js/dashboard-panels.js"></script>
+</body>
+</html>

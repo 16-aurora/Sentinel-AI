@@ -1,0 +1,64 @@
+{
+    "system": "Sentinel AI",
+    "orchestrator_version": "1.0",
+    "domains_available": 3,
+    "domains_total": 3,
+    "system_status": "OPERATIONAL",
+    "domains": {
+        "cybersecurity": {
+            "domain": "cybersecurity",
+            "status": "AVAILABLE",
+            "file": "data/processed/sentinel_integrated_intelligence_v2.csv",
+            "unit": "CVE / vulnerability",
+            "records": 1768,
+            "score_column": "risk_score",
+            "category_column": "risk_level",
+            "categories": {
+                "CRITICAL": 1132,
+                "HIGH": 538,
+                "MEDIUM": 94,
+                "LOW": 4
+            },
+            "score_min": 27.0,
+            "score_max": 100.0,
+            "score_mean": 84.88,
+            "error": null
+        },
+        "climate": {
+            "domain": "climate",
+            "status": "AVAILABLE",
+            "file": "data/processed/climate/eu27_climate_exposure_index_v1.csv",
+            "unit": "Country-year",
+            "records": 297,
+            "score_column": "climate_exposure_index",
+            "category_column": "climate_exposure_category",
+            "categories": {
+                "High": 32,
+                "Elevated": 113,
+                "Moderate": 125,
+                "Low": 27
+            },
+            "score_min": 11.0,
+            "score_max": 92.93,
+            "score_mean": 50.17,
+            "error": null
+        },
+        "economy": {
+            "domain": "economy",
+            "status": "AVAILABLE",
+            "file": "data/processed/economy/eu27_economic_risk_assessment_v1.csv",
+            "unit": "Country-year",
+            "records": 297,
+            "score_column": "economic_risk_score",
+            "category_column": "economic_risk_category",
+            "categories": {
+                "MODERATE": 40,
+                "LOW": 257
+            },
+            "score_min": 0.0,
+            "score_max": 40.88,
+            "score_mean": 7.85,
+            "error": null
+        }
+    }
+}

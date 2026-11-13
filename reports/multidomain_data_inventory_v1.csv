@@ -1,0 +1,4 @@
+﻿domain,file,status,rows,columns,unit
+CYBERSECURITY,data\processed\sentinel_integrated_intelligence_v2.csv,PASSED,1768,94,CVE / vulnerability
+CLIMATE,data\processed\climate\eu27_climate_exposure_index_v1.csv,PASSED,297,22,Country-year
+ECONOMY,data\processed\economy\eu27_economic_risk_assessment_v1.csv,PASSED,297,9,Country-year

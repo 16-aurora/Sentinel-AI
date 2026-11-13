@@ -1,0 +1,5 @@
+﻿scenario,mean_score,maximum_score,moderate_profiles,high_profiles,critical_profiles,top_10_overlap_with_baseline
+BASELINE,7.85,40.88,40,0,0,10
+EQUAL_WEIGHTS,7.95,38.69,46,0,0,4
+GROWTH_FOCUS,7.69,49.65,27,0,0,10
+SOCIAL_PRICE_FOCUS,8.15,38.62,47,0,0,0

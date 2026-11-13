@@ -1,0 +1,18 @@
+{
+    "experiment": "PU Bagging algorithm comparison",
+    "algorithms": [
+        "Random Forest",
+        "Extra Trees"
+    ],
+    "iterations_per_model": 50,
+    "trees_per_iteration": 200,
+    "total_trees_per_model": 10000,
+    "validation_observations": 354,
+    "higher_observed_label_separation": "Extra Trees",
+    "fastest_training": "Extra Trees",
+    "random_forest_separation": 0.13501,
+    "extra_trees_separation": 0.16985,
+    "random_forest_training_seconds": 22.9601,
+    "extra_trees_training_seconds": 16.7439,
+    "status": "PRELIMINARY_COMPARISON_COMPLETED"
+}
