@@ -61,8 +61,6 @@ Sentinel AI es una plataforma de inteligencia de riesgos y alerta temprana multi
   <img src="images/econ-list.png">
 </p>
 
-### Monitorización y estado del sistema
-
 ## Monitorización y estado del sistema
 
 Sentinel AI incorpora un panel de monitorización que permite consultar el estado operativo de la plataforma y la disponibilidad de los servicios de cada dominio.
